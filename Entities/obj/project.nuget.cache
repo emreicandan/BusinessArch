@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "dgSpecHash": "JhPbrFjrev1PQYk6RmlhW9yde4mZxlFOi2buWowJoWheev3DHxJhJ91PBMc4uXkz+NP/70lYpT+wVJKqQg1Dcg==",
+  "success": true,
+  "projectFilePath": "/Users/emrecandan/Projects/BusinessArcitecture/Entities/Entities.csproj",
+  "expectedPackageFiles": [
+    "/Users/emrecandan/.nuget/packages/autofac/8.0.0/autofac.8.0.0.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/autofac.extensions.dependencyinjection/9.0.0/autofac.extensions.dependencyinjection.9.0.0.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/autofac.extras.dynamicproxy/7.1.0/autofac.extras.dynamicproxy.7.1.0.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.entityframeworkcore/7.0.16/microsoft.entityframeworkcore.7.0.16.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.16/microsoft.entityframeworkcore.abstractions.7.0.16.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.16/microsoft.entityframeworkcore.analyzers.7.0.16.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.extensions.configuration.binder/7.0.4/microsoft.extensions.configuration.binder.7.0.4.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.extensions.logging/7.0.0/microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.identitymodel.abstractions/7.3.1/microsoft.identitymodel.abstractions.7.3.1.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.3.1/microsoft.identitymodel.jsonwebtokens.7.3.1.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.identitymodel.logging/7.3.1/microsoft.identitymodel.logging.7.3.1.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/microsoft.identitymodel.tokens/7.3.1/microsoft.identitymodel.tokens.7.3.1.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/system.diagnostics.diagnosticsource/7.0.2/system.diagnostics.diagnosticsource.7.0.2.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/system.diagnostics.eventlog/6.0.0/system.diagnostics.eventlog.6.0.0.nupkg.sha512",
+    "/Users/emrecandan/.nuget/packages/system.identitymodel.tokens.jwt/7.3.1/system.identitymodel.tokens.jwt.7.3.1.nupkg.sha512"
+  ],
+  "logs": []
+}

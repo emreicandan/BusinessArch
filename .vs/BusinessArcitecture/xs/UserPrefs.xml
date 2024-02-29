@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="{D80FC790-FCE6-4C33-9C2C-A7633986D99A}|https">
+  <MonoDevelop.Ide.ItemProperties.WebAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebAPI/Program.cs">
+    <Files>
+      <File FileName="WebAPI/Program.cs" Line="30" Column="22" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BusinessArcitecture" expanded="True">
+            <Node name="Business" expanded="True">
+              <Node name="Abstracts" expanded="True" />
+              <Node name="Concretes" expanded="True" />
+              <Node name="DependencyResolver" expanded="True">
+                <Node name="Autofac" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Core" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Aspect" selected="True" />
+              <Node name="Utilities" expanded="True">
+                <Node name="Interceptor" expanded="True" />
+                <Node name="Security" expanded="True">
+                  <Node name="Helper" expanded="True" />
+                  <Node name="JWT" expanded="True" />
+                </Node>
+                <Node name="Tools" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="WebAPI" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../../ShoppingAPI/ShoppingAPI/Repositories/Concretes/ProductRepository.cs" line="9" column="8" endLine="11" endColumn="9" offsetX="-1" offsetY="-1" expression="ProductRepository" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>
