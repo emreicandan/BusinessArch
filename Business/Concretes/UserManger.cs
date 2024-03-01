@@ -5,6 +5,8 @@ using DataAccess.Abstracts;
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Core.Aspect.Autofac.Logging;
+using Core.Aspect.Autofac.Performance;
+using Core.Aspect.Autofac.Caching;
 
 namespace Business.Concretes;
 
@@ -24,6 +26,7 @@ public class UserManger : IUserService
         return _userRepository.Add(user);
     }
 
+    [CacheRemoveAspect("Business.Abstracts.IUserService.GetAllAsync")]
     public async Task<User> AddAsync(User user)
     {
         return await _userRepository.AddAsync(user);
@@ -35,7 +38,7 @@ public class UserManger : IUserService
         _userValidation.UserMustNotBeEmpty(user).Wait();
         _userRepository.Delete(user);
     }
-
+    [CacheRemoveAspect("Business.Abstracts.IUserService.GetAllAsync")]
     public async Task DeleteByIdAsync(Guid id)
     {
         var user = _userRepository.Get(u => u.Id == id);
@@ -47,6 +50,8 @@ public class UserManger : IUserService
     {
         return _userRepository.GetAll().ToList();
     }
+    [CacheAspect(20)]
+    [PerformanceAspect(0)]
     [DebugWriteAspect(Message = "Çalıştı")]
     public async Task<IList<User>> GetAllAsync()
     {

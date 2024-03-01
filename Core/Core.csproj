@@ -19,6 +19,13 @@
     <None Remove="Utilities\Interceptor\" />
     <None Remove="Aspect\Autofac\" />
     <None Remove="Aspect\Autofac\Logging\" />
+    <None Remove="Aspect\Autofac\Transaction\" />
+    <None Remove="Aspect\Autofac\Performance\" />
+    <None Remove="CrossCuttingConcerns\" />
+    <None Remove="CrossCuttingConcerns\Caching\" />
+    <None Remove="CrossCuttingConcerns\Caching\Custom\" />
+    <None Remove="CrossCuttingConcerns\Caching\Custom\Microsoft\" />
+    <None Remove="Aspect\Autofac\Caching\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repository\" />
@@ -33,6 +40,13 @@
     <Folder Include="Utilities\Interceptor\" />
     <Folder Include="Aspect\Autofac\" />
     <Folder Include="Aspect\Autofac\Logging\" />
+    <Folder Include="Aspect\Autofac\Transaction\" />
+    <Folder Include="Aspect\Autofac\Performance\" />
+    <Folder Include="CrossCuttingConcerns\" />
+    <Folder Include="CrossCuttingConcerns\Caching\" />
+    <Folder Include="CrossCuttingConcerns\Caching\Custom\" />
+    <Folder Include="CrossCuttingConcerns\Caching\Custom\Microsoft\" />
+    <Folder Include="Aspect\Autofac\Caching\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.16" />

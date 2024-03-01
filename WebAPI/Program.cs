@@ -1,14 +1,11 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Business;
-using Business.Abstracts;
 using Business.DependencyResolver.Autofac;
 using Business.Validations;
-using Core.Entities;
 using Core.Utilities.Tools;
 using DataAccess.Context;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 

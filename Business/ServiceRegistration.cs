@@ -2,6 +2,8 @@
 using Business.Abstracts;
 using Business.Concretes;
 using Business.Validations;
+using Core.CrossCuttingConcerns.Caching;
+using Core.CrossCuttingConcerns.Caching.Custom;
 using Core.Utilities.Security.JWT;
 using DataAccess.Abstracts;
 using DataAccess.Concretes;
@@ -14,7 +16,7 @@ namespace Business
 	{
 		public static void RegisterBusinessService(this IServiceCollection services)
 		{
-
+            services.AddSingleton<ICacheService, CustomCacheMenager>();
 			services.AddDbContext<BusinessDbContext>();
             services.AddSingleton<ITokenHelper, JWTTokenHelper>();
             services.AddScoped<IClaimRepository, ClaimRepository>();

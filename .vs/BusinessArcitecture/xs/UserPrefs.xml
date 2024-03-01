@@ -5,9 +5,12 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="WebAPI/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Aspect/Autofac/Caching/CacheAspect.cs">
     <Files>
-      <File FileName="WebAPI/Program.cs" Line="30" Column="22" />
+      <File FileName="Business/Concretes/UserManger.cs" Line="42" Column="47" />
+      <File FileName="Core/Aspect/Autofac/Caching/CacheAspect.cs" Line="51" Column="1" />
+      <File FileName="Core/CrossCuttingConcerns/Caching/Custom/CustomCacheMenager.cs" Line="48" Column="1" />
+      <File FileName="WebAPI/Program.cs" Line="19" Column="53" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,15 +25,28 @@
             </Node>
             <Node name="Core" expanded="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="Aspect" selected="True" />
+              <Node name="Aspect" expanded="True">
+                <Node name="Autofac" expanded="True">
+                  <Node name="Caching" expanded="True">
+                    <Node name="CacheAspect.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="CrossCuttingConcerns" expanded="True">
+                <Node name="Caching" expanded="True">
+                  <Node name="Custom" expanded="True">
+                    <Node name="Microsoft" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Repository" expanded="True" />
               <Node name="Utilities" expanded="True">
                 <Node name="Interceptor" expanded="True" />
-                <Node name="Security" expanded="True">
-                  <Node name="Helper" expanded="True" />
-                  <Node name="JWT" expanded="True" />
-                </Node>
                 <Node name="Tools" expanded="True" />
               </Node>
+            </Node>
+            <Node name="Entities" expanded="True">
+              <Node name="Models" expanded="True" />
             </Node>
             <Node name="WebAPI" expanded="True">
               <Node name="Controllers" expanded="True" />
