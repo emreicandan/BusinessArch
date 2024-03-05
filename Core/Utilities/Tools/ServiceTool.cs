@@ -12,5 +12,5 @@ public static class ServiceTool // IoC containere httpContext harici erişebilec
         ServiceProvider = services.BuildServiceProvider();
     }
 
-    public static T GetService<T>() => ServiceProvider.GetService<T>() ?? throw new Exception("Service not found");
+    public static T GetService<T>() => ServiceProvider.GetService<T>() ?? throw new Exception("Service not found => " + typeof(T).Name);
 }

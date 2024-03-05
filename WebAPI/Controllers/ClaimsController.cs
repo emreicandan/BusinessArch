@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Business.Abstracts;
+using Core.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -11,36 +9,42 @@ namespace WebAPI.Controllers
     [Route("api/[controller]")]
     public class ClaimsController : Controller
     {
-        // GET: api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
+        private readonly IClaimService _claimService;
+        public ClaimsController(IClaimService claimService)
         {
-            return new string[] { "value1", "value2" };
+            _claimService = claimService;
+        }
+        [HttpGet("GetById/{id}")]
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            return Ok(await _claimService.GetByIdAsync(id));
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> GetAll()
         {
-            return "value";
+            return Ok(await _claimService.GetAllAsync());
         }
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody]string value)
+
+        [HttpPost("Add")]
+        public async Task<IActionResult> Add([FromBody] Claim claim)
         {
+            return Ok(await _claimService.AddAsync(claim));
         }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        [HttpPut("Update")]
+        public async Task<IActionResult> Update([FromBody] Claim claim)
         {
+            return Ok(await _claimService.UpdateAsync(claim));
         }
 
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("DeleteById/{id}")]
+        public async Task<IActionResult> DeleteById(Guid id)
         {
+            await _claimService.DeleteByIdAsync(id);
+            return Ok("Claim deleted");
         }
     }
 }

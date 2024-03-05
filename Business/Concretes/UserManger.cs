@@ -23,12 +23,18 @@ public class UserManger : IUserService
 
     public User Add(User user)
     {
+        _userValidation.CheckUserName(user).Wait();
+        _userValidation.CheckFirstName(user).Wait();
+        _userValidation.CheckLastName(user).Wait();
         return _userRepository.Add(user);
     }
 
     [CacheRemoveAspect("Business.Abstracts.IUserService.GetAllAsync")]
     public async Task<User> AddAsync(User user)
     {
+       await _userValidation.CheckUserName(user);
+       await _userValidation.CheckFirstName(user);
+       await _userValidation.CheckLastName(user);
         return await _userRepository.AddAsync(user);
     }
 

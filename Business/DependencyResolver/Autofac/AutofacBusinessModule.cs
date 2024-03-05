@@ -16,10 +16,13 @@ public class AutofacBusinessModule : Module
 {
     protected override void Load(ContainerBuilder builder)
     {
-        builder.RegisterType<CustomCacheMenager>().As<ICacheService>();
         builder.RegisterType<ClaimMenager>().As<IClaimService>();
         builder.RegisterType<UserManger>().As<IUserService>();
         builder.RegisterType<AuthMenager>().As<IAuthService>();
+        builder.RegisterType<ProductMenager>().As<IProductService>();
+        builder.RegisterType<OrderMenager>().As<IOrderService>();
+        builder.RegisterType<CategoryMenager>().As<ICategoryService>();
+        builder.RegisterType<ProductTransactionMenager>().As<IProductTransactionService>();
 
         var assembly = Assembly.GetExecutingAssembly();
         builder.RegisterAssemblyTypes(assembly)

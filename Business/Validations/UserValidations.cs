@@ -15,5 +15,63 @@ public class UserValidations
         }
         await Task.CompletedTask;
     }
+
+    public async Task CheckUserName(User user)
+    {
+        IList<string> BlackList = new List<string>()
+        {
+             "allah",
+            "kuran",
+            "peygamber",
+            "hz",
+            "atatürk"
+        };
+        foreach(string name in BlackList)
+        {
+            if (user.UserName.ToLower().Contains(name))
+            {
+                throw new ValidationException($"User name cannot be {name}");
+            }
+        }
+        await Task.CompletedTask;
+    }
+    public async Task CheckFirstName(User user)
+    {
+        IList<string> BlackList = new List<string>()
+        {
+            "allah",
+            "kuran",
+            "peygamber",
+            "hz",
+            "atatürk"
+        };
+        foreach (string name in BlackList)
+        {
+            if (user.FirstName.ToLower().Contains(name))
+            {
+                throw new ValidationException($"User name cannot be {name}");
+            }
+        }
+        await Task.CompletedTask;
+    }
+    public async Task CheckLastName(User user)
+    {
+        IList<string> BlackList = new List<string>()
+        {
+            "allah",
+            "kuran",
+            "peygamber",
+            "hz",
+            "atatürk"
+        };
+        foreach (string name in BlackList)
+        {
+            if (user.LastName.ToLower().Contains(name))
+            {
+                throw new ValidationException($"User name cannot be {name}");
+            }
+        }
+        await Task.CompletedTask;
+    }
 }
 

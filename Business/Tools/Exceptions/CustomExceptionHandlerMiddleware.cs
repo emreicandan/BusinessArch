@@ -31,7 +31,7 @@ public class CustomExceptionHandlerMiddleware
 				await HandleValidationException(ex.InnerException as ValidationException, context);
 				return;
 			}
-			_logger.LogError("İç Hata Oluştu :" + ex.Message);
+			_logger.LogError("İç Hata Oluştu :" +ex.Message);
 			context.Response.StatusCode = StatusCodes.Status500InternalServerError;
 			context.Response.ContentType = Text.Plain;
 			await context.Response.WriteAsync("Internal Server Error");

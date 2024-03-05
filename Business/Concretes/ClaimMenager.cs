@@ -4,6 +4,7 @@ using Business.Validations;
 using DataAccess.Abstracts;
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using Core.Aspect.Autofac.Caching;
 
 namespace Business.Concretes;
 
@@ -22,7 +23,7 @@ public class ClaimMenager : IClaimService
     {
         return _claimRepository.Add(claim);
     }
-
+    [CacheRemoveAspect("Business.Abstracts.IClaimService.GetAllAsync")]
     public async Task<Claim> AddAsync(Claim claim)
     {
         return await _claimRepository.AddAsync(claim);
@@ -34,7 +35,7 @@ public class ClaimMenager : IClaimService
         _claimValidations.IsClaimEmpty(claim).Wait();
         _claimRepository.Delete(claim);
     }
-
+    [CacheRemoveAspect("Business.Abstracts.IClaimService.GetAllAsync")]
     public async Task DeleteByIdAsync(Guid id)
     {
         var claim = _claimRepository.Get(c => c.Id == id);
@@ -46,7 +47,7 @@ public class ClaimMenager : IClaimService
     {
         return _claimRepository.GetAll().ToList();
     }
-
+    [CacheAspect(10)]
     public async Task<IList<Claim>> GetAllAsync()
     {
         var result = await _claimRepository.GetAllAsync();
@@ -79,7 +80,7 @@ public class ClaimMenager : IClaimService
     {
         return _claimRepository.Update(claim);
     }
-
+    [CacheRemoveAspect("Business.Abstracts.IClaimService.GetAllAsync")]
     public async Task<Claim> UpdateAsync(Claim claim)
     {
         return await _claimRepository.UpdateAsync(claim);

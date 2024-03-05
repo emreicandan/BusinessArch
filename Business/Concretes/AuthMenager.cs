@@ -1,6 +1,9 @@
 ﻿using System;
 using Business.Abstracts;
 using Business.Validations;
+using Core.Aspect.Autofac.Caching;
+using Core.Aspect.Autofac.Performance;
+using Core.Aspect.Autofac.Transaction;
 using Core.Entities;
 using Core.Utilities.Security.Helper;
 using Core.Utilities.Security.JWT;
@@ -19,7 +22,8 @@ public class AuthMenager : IAuthService
         _tokenHelper = tokenHelper;
         _authValidations = authValidations;
     }
-
+    [TransactionScopedAspect]
+    [CacheRemoveAspect("Business.Abstracts.IUserService.GetAllAsync")]
     public TokenModel Register(UserForRegisterDTO userForRegisterDto)
     {
         var user = new User();
@@ -36,7 +40,7 @@ public class AuthMenager : IAuthService
         _userService.Add(user);
         return _tokenHelper.CreateToken(user);
     }
-
+    [TransactionScopedAspect]
     public TokenModel SignIn(UserForLoginDTO userForLoginDto)
     {
         var user = _userService.GetByUserNameWithClaims(userForLoginDto.UserName);

@@ -9,11 +9,11 @@ public interface ICategoryService
 
     Task<Category?> GetByIdAsync(Guid id);
 
-    Category? GetCategoryNameWithProduct(string categoryName);
+    IList<Category> GetAllCategoryName(string categoryName);
 
-    IList<Category> GetAll(Category category);
+    IList<Category> GetAll();
 
-    Task<IList<Category>> GetAllAsync(Category category);
+    Task<IList<Category>> GetAllAsync();
 
     Category Add(Category category);
 

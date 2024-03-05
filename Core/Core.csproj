@@ -26,6 +26,8 @@
     <None Remove="CrossCuttingConcerns\Caching\Custom\" />
     <None Remove="CrossCuttingConcerns\Caching\Custom\Microsoft\" />
     <None Remove="Aspect\Autofac\Caching\" />
+    <None Remove="DependencyResolver\" />
+    <None Remove="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repository\" />
@@ -47,6 +49,8 @@
     <Folder Include="CrossCuttingConcerns\Caching\Custom\" />
     <Folder Include="CrossCuttingConcerns\Caching\Custom\Microsoft\" />
     <Folder Include="Aspect\Autofac\Caching\" />
+    <Folder Include="DependencyResolver\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.16" />

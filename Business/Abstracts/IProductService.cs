@@ -1,4 +1,5 @@
 ﻿using System;
+using Entities.DTOs;
 using Entities.Models;
 
 namespace Business.Abstracts;
@@ -11,22 +12,21 @@ namespace Business.Abstracts;
 
 	Task<Product?> GetByIdAsync(Guid id);
 
-	Product? GetByProductNameWithCategory(string productName);
+	IList<Product> GetAllByProductNameWithCategory(string productName);
 
-	Task<Product?> GetByProductNameWithCategoryAsync(string productName);
+	Task<IList<Product>> GetAllByProductNameWithCategoryAsync(string productName);
 
+	IList<Product> GetAll();
 
-	IList<Product> GetAll(Product product);
+	Task<IList<Product>> GetAllAsync();
 
-	Task<IList<Product>> GetAllAsync(Product product);
+    IList<Product> GetAllByProductName(string productName);
 
-    Product GetAllByProductName(string productName);
+    Task<IList<Product>> GetAllByProductNameAsync(string productName);
 
-    Task<Product> GetAllByProductNameAsync(string productName);
+	Product Add(AddProductDto addProductDto);
 
-	Product Add(Product product);
-
-	Task<Product> AddAsync(Product product);
+	Task<Product> AddAsync(AddProductDto addProductDto);
 
 	Product Update(Product product);
 
