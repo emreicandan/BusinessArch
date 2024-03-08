@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Repository\" />
+    <None Remove="Entities\" />
+    <None Remove="Utilities\" />
+    <None Remove="Utilities\Security\" />
+    <None Remove="Utilities\Security\JWT\" />
+    <None Remove="Utilities\Security\Models\" />
+    <None Remove="Utilities\Security\Helper\" />
+    <None Remove="Utilities\Tools\" />
+    <None Remove="Aspect\" />
+    <None Remove="Utilities\Interceptor\" />
+    <None Remove="Aspect\Autofac\" />
+    <None Remove="Aspect\Autofac\Logging\" />
+    <None Remove="Aspect\Autofac\Transaction\" />
+    <None Remove="Aspect\Autofac\Performance\" />
+    <None Remove="CrossCuttingConcerns\" />
+    <None Remove="CrossCuttingConcerns\Caching\" />
+    <None Remove="CrossCuttingConcerns\Caching\Custom\" />
+    <None Remove="CrossCuttingConcerns\Caching\Custom\Microsoft\" />
+    <None Remove="Aspect\Autofac\Caching\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repository\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Utilities\Security\" />
+    <Folder Include="Utilities\Security\JWT\" />
+    <Folder Include="Utilities\Security\Models\" />
+    <Folder Include="Utilities\Security\Helper\" />
+    <Folder Include="Utilities\Tools\" />
+    <Folder Include="Aspect\" />
+    <Folder Include="Utilities\Interceptor\" />
+    <Folder Include="Aspect\Autofac\" />
+    <Folder Include="Aspect\Autofac\Logging\" />
+    <Folder Include="Aspect\Autofac\Transaction\" />
+    <Folder Include="Aspect\Autofac\Performance\" />
+    <Folder Include="CrossCuttingConcerns\" />
+    <Folder Include="CrossCuttingConcerns\Caching\" />
+    <Folder Include="CrossCuttingConcerns\Caching\Custom\" />
+    <Folder Include="CrossCuttingConcerns\Caching\Custom\Microsoft\" />
+    <Folder Include="Aspect\Autofac\Caching\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.16" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.3.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.4" />
+    <PackageReference Include="Autofac" Version="8.0.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="7.1.0" />
+  </ItemGroup>
+</Project>
